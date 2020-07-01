@@ -1,0 +1,70 @@
+.bg-footer-escuro {
+    background-color: rgb(30, 35, 38);
+}
+
+.bg-corpo-escuro-main {
+    background-color: rgb(42, 45, 47);
+}
+
+.bg-corpo-escuro {
+    background-color: rgb(37, 42, 46);
+}
+
+.separador {
+    border-bottom: 2px solid #6c757d;
+}
+
+.caixa {
+    border-top: 2px solid #6c757d;
+    border-bottom: 2px solid #6c757d;
+    border-right: 2px solid #6c757d;
+    text-transform: uppercase;
+}
+
+/* Dispositivos extra small (telefones em modo retrato, com menos de 576px)*/
+@media (max-width: 575.98px) {
+    img {
+        width: 320px;
+    }
+    h1 {
+        font-size: 1.7em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+    .bandeira {
+        width: 48px;
+    }
+}
+
+/* Dispositivos small (telefones em modo paisagem, com 576px ou mais)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    img {
+        width: 320px;
+    }
+    
+    h1 {
+        font-size: 1.7em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+    .bandeira {
+        width: 48px;
+    }
+}
+
+/* Dispositivos médios (tablets com 768px ou mais)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    
+}
+
+/* Dispositivos large (desktops com 992px ou mais)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}
+
+/* Dispositivos extra large (desktops grandes com 1200px ou mais)*/
+@media (min-width: 1200px) { ... }

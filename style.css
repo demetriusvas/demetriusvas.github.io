@@ -1,0 +1,163 @@
+body {
+    background: #000046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bg-menu {
+    background: linear-gradient(to right, #04184b, #042a68, #04184b);
+}
+
+.container {
+    margin-top: 25px;
+    background-color: whitesmoke;
+    max-width: 700px;
+    border-radius: 5px;
+    padding-top: 12px;
+}
+
+header {
+    background-image: url('./img/bg-cover.jpg');
+    background-size: cover;
+    border-radius: 5px;
+    height: 150px;
+}
+
+h1 {
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+#foto-perfil {
+    display: block;
+    height: 150px;
+    width: 150px;
+    transform: translateY(20%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#img-portfolio:hover {
+    transform: scale(1.2);
+}
+
+.border-gradient {
+    border: 1px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+}
+.border-gradient-purple {
+    border-image-source: linear-gradient(to left, lime, blue);
+}
+
+.btn-colorido {
+    color:#fff;
+    background: linear-gradient(to right, #1CB5E0, #000046);
+    border-color:#0d6efd;
+}
+
+.btn-colorido:hover {
+    color:#fff;
+    transform: scale(1.1);
+}
+
+.separador {
+    border-bottom: 2px solid #6c757d;
+}
+
+
+/*****************************
+-----------GALERIA------------ 
+*****************************/
+.galeria > img {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.galeria > img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.galeria-full-screen {
+    z-index:3;
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    color: #FFF!important;
+    background-color: rgba(0, 0, 0, 0.9)!important;
+}
+
+.galeria-full-screen-conteudo {
+    margin:auto;
+    background-color:transparent!important;
+    position:relative;
+    padding:0;
+    outline:0;
+    width:600px;
+    padding-top:64px!important;
+    padding-bottom:64px!important;
+}
+.galeria-full-screen-botao-fechar {
+    font-size:50px!important;
+    cursor: pointer;
+    position:absolute;
+    right:0;
+    top:0;
+}
+
+.galeria-full-screen-conteudo-imagem {
+    max-width:100%;
+    height:auto;
+}
+
+.galeria-full-screen-animacao {
+    animation:animatezoom 0.2s;
+}
+
+@keyframes animatezoom {
+    from {
+        transform:scale(0)
+    } 
+    to {
+        transform:scale(1)
+    }
+}
+
+@media (max-width:600px) {
+    .galeria-full-screen-conteudo {
+        margin:0 30px;
+        width:auto!important;
+    }
+    
+    .galeria-full-screen {
+        padding-top:30px;
+    }
+}
+
+@media (max-width:768px) {
+    .galeria-full-screen-conteudo {
+        width:500px;
+    }
+    
+    .galeria-full-screen {
+        padding-top:50px;
+    }
+}
+
+@media (min-width:993px) {
+    .galeria-full-screen-conteudo {
+        width:600px;
+    }    
+}

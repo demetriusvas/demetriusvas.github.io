@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <title>Demetrius - Portfolio</title>
+</head>
+<body>
+    <div class="container shadow">
+
+        <nav class="navbar navbar-expand-md navbar-dark bg-menu rounded" aria-label="Twelfth navbar example">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+      
+              <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="portfolio.html">Portfólio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="curriculo.html">Currículo</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="certificados.html">Certificados</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+        <header>
+            <img id="foto-perfil" class="border-gradient border-gradient-purple" src="https://unavatar.now.sh/github/demetriusvas" />  
+        </header>
+
+        <div class="row text-center pt-5">
+            <h1>Demetrius Vignati</h1>
+            <h2>Dev Front-end ● Freelancer</h2>
+            <p></p>
+            <div class="row">
+                <div class="col-md-6">
+                    <p><i class="fab fa-whatsapp fa-2x text-success"></i> Tel: (11) 99719-1600</p>
+                </div>
+                <div class="col-md-6">
+                    <p><i class="fas fa-envelope fa-2x text-info"></i> E-mail: demetriusvas@gmail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row text-center">
+          <div class="col-md-12">
+            <h2>Meu Portfolio</h2>
+          </div>
+
+          <div class="col-md-4 galeria">
+            <img src="./img/projetos/img_5terre.jpg" class="rounded" style="width:100%" onclick="onClick(this)" alt="Quiet day at the beach. Cold, but beautiful">
+            <img src="./img/projetos/img_forest.jpg" class="rounded" style="width:100%" onclick="onClick(this)" alt="Waiting for the bus in the desert">
+            <img src="./img/projetos/img_lights.jpg" class="rounded" style="width:100%" onclick="onClick(this)" alt="Nature again.. At its finest!">
+          </div>
+
+          <div class="col-md-4 galeria">
+            <img src="./img/projetos/img_5terre.jpg" class="rounded" style="width:100%" onclick="onClick(this)" alt="Quiet day at the beach. Cold, but beautiful">
+            <img src="./img/projetos/img_forest.jpg" class="rounded" style="width:100%" onclick="onClick(this)" alt="Waiting for the bus in the desert">
+            <img src="./img/projetos/img_lights.jpg" class="rounded" style="width:100%" onclick="onClick(this)" alt="Nature again.. At its finest!">
+          </div>
+          
+          <div class="col-md-4 galeria">
+            <img src="./img/projetos/img_5terre.jpg" class="rounded" style="width:100%" onclick="onClick(this)" alt="Quiet day at the beach. Cold, but beautiful">
+            <img src="./img/projetos/img_forest.jpg" class="rounded" style="width:100%" onclick="onClick(this)" alt="Waiting for the bus in the desert">
+            <img src="./img/projetos/img_lights.jpg" class="rounded" style="width:100%" onclick="onClick(this)" alt="Nature again.. At its finest!">
+          </div>
+        </div>
+
+        <hr>
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="galeria-full-screen" style="padding-top:0" onclick="this.style.display='none'">
+          <span class="galeria-full-screen-botao-fechar">×</span>
+          <div class="galeria-full-screen-conteudo galeria-full-screen-animacao">
+              <img id="img01" class="galeria-full-screen-conteudo-imagem">
+              <p id="caption"></p>
+          </div>
+        </div>
+        
+    </div>
+
+    <script>       
+      //Imagens em Full Screen
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }    
+    </script>
+
+    
+        
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    background-color: #0d1117;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    color: white;
+}
+
+/* Column container */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    flex: 30%;
+    background-color: #15191f;
+    padding: 20px;
+    width: 20rem;
+    border-radius: 20px;
+}
+
+.side > img{
+    border-radius: 50%;
+    width: 10rem;
+    border: 5px solid rgb(202, 168, 123);
+    transition: transform .5s;
+}
+
+.side > img:hover{
+    transform: scale(1.09);
+}
+
+.side > p > a{
+    text-decoration: none;
+    color: white;
+}
+
+.side > p > a:hover{
+    text-decoration: underline;
+}
+
+.texto-forte{
+    font-size: 2rem;
+}
+
+.texto-light{
+    font-size: 0.8rem;
+}
+
+/* Main column */
+.main {
+    flex: 70%;
+    background-color: #0d1117;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .flex-container > div {
+    margin: 5px;
+    text-align: center;
+  }
+
+  .flex-container > div > a > img{
+    width: 250px;
+    border-radius: 10px;
+    transition: transform .5s;
+  }
+
+  .flex-container > div > a > img:hover{
+    transform: scale(1.05);
+  }
+
+/* Footer */
+.footer {
+    padding: 10px;
+    background: #0d1117;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    align-items: center;
+    color: lightslategray;
+    font-size: 0.9rem;
+    border-top: 1px solid lightslategray;
+    margin-top: 15px;
+
+}
+
+.footer > a{
+    color: lightslategray;
+    font-size: 1.5rem;
+}
+
+.footer > a:hover{
+    color: lightgray;
+    font-size: 1.7rem;
+}
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+/* @media screen and (max-width: 780px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .side{
+        background-color: lightskyblue;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+} */
+
+/**
+ * ------------------------------------------
+ *  Responsive Grid Media Queries - 1280, 1024, 768, 480
+ *   1280-more   - desktop 4k
+ *   1280-1024   - desktop (default grid)
+ *   1024-768    - tablet landscape
+ *   768-480     - tablet 
+ *   480-less    - phone landscape & smaller
+ * --------------------------------------------
+ */
+
+@media all and (max-width: 480px) {
+    .side{
+        text-align: center;
+    }
+
+    .side > img{
+        width: 8rem;
+    }
+
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+    .side{
+        width: 100%;
+        text-align: center;
+    }
+    .row {
+        flex-direction: column;
+    }
+
+    .side > img{
+        width: 8rem;
+    }
+
+    
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .side{
+        text-align: center;
+    }
+
+    .side > img{
+        width: 10rem;
+    }
+
+    
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    .side{
+        text-align: center;
+    }
+
+    .side > img{
+        width: 10rem;
+    }
+
+    
+}
+
+@media all and (min-width: 1280px) {
+    .side{
+        text-align: center;
+    }
+
+    .side > img{
+        width: 10rem;
+    }
+    
+}

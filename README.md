@@ -1,2 +1,2 @@
 # demetriusvas.github.io
-Repositório com todos os meus principais projetor.
+Repositório com todos os meus principais projetos.
